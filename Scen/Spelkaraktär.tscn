@@ -1,15 +1,67 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2nmf1b7m2v7b"]
+[gd_scene load_steps=10 format=3 uid="uid://c2nmf1b7m2v7b"]
 
 [ext_resource type="Script" uid="uid://h60ayaayl8b8" path="res://Kod/Player.gd" id="1_bipid"]
-[ext_resource type="Texture2D" uid="uid://cnittdbg5c2w7" path="res://icon.svg" id="2_dqwxp"]
+[ext_resource type="Texture2D" uid="uid://dbhp185l48uee" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0476_Capa-477.png" id="2_laho1"]
+[ext_resource type="Texture2D" uid="uid://dp0lt27lkwufr" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0480_Capa-481.png" id="2_xqwvk"]
+[ext_resource type="Texture2D" uid="uid://di58x60dsq82v" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0481_Capa-482.png" id="3_agks7"]
+[ext_resource type="Texture2D" uid="uid://b6fwhk5evn101" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0477_Capa-478.png" id="3_turq4"]
+[ext_resource type="Texture2D" uid="uid://dkdyl1jlo2tu3" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0478_Capa-479.png" id="4_ka6b2"]
+[ext_resource type="Texture2D" uid="uid://ch7dpsh4h3owv" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0483_Capa-484.png" id="7_phifu"]
+[ext_resource type="Texture2D" uid="uid://dyhfgjdvcsv56" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0484_Capa-485.png" id="8_uuvcp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p8rw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xqwvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_agks7")
+}],
+"loop": true,
+"name": &"Höger",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_turq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ka6b2")
+}],
+"loop": true,
+"name": &"Neråt",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_laho1")
+}],
+"loop": true,
+"name": &"Stilla",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_phifu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uuvcp")
+}],
+"loop": true,
+"name": &"Uppåt",
+"speed": 6.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_bipid")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_dqwxp")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2p8rw")
+animation = &"Uppåt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
