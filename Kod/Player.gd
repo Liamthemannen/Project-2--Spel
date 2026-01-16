@@ -10,8 +10,8 @@ var input_vector: Vector2
 
 
 func get_input():
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_vector.x = Input.get_action_strength("Go_right") - Input.get_action_strength("Go_left")
+	input_vector.y = Input.get_action_strength("Go_down") - Input.get_action_strength("Go_Up")
 	return input_vector.normalized()
 	
 func _process(delta: float) -> void:
