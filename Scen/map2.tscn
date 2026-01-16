@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://kjrirjr7hw6f"]
+
+[ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="1_pkfje"]
+
+[node name="Map" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -186.0
+offset_top = -109.99999
+offset_right = -146.0
+offset_bottom = -69.99999
+scale = Vector2(9.725111, 5.549922)
+color = Color(0.2784314, 0.20784314, 0.17254902, 1)
+
+[node name="Buske" parent="." instance=ExtResource("1_pkfje")]
+position = Vector2(4, 4)
+
+[node name="Buske2" parent="." instance=ExtResource("1_pkfje")]
+position = Vector2(17, 28)
+
+[node name="Buske3" parent="." instance=ExtResource("1_pkfje")]
+position = Vector2(31, 10)
+
+[node name="Buske4" parent="." instance=ExtResource("1_pkfje")]
+position = Vector2(3, 36)
