@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgkc2fjkwhe2h"]
+
+[ext_resource type="Texture2D" uid="uid://bol12y5olbo5v" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Modular Bushes/Zombie-Tileset---_0090_Capa-91.png" id="1_3d1jc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3d1jc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3d1jc"]
+radius = 7.0
+
+[node name="Buske" type="StaticBody2D"]
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_3d1jc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3d1jc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_3d1jc")

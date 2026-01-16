@@ -1,14 +1,34 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpt1j6hgafrji"]
 
-[ext_resource type="PackedScene" uid="uid://cc1efn1jwvg4t" path="res://Scen/Map.tscn" id="1_303lf"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
+[ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
 
 [node name="Main" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource("1_303lf")]
-position = Vector2(66, -42)
+[node name="Bakgrund" type="ColorRect" parent="."]
+offset_left = -143.0
+offset_top = -81.0
+offset_right = -102.437706
+offset_bottom = -39.514538
+scale = Vector2(7.11373, 3.904982)
+color = Color(0.2784314, 0.20784314, 0.17254902, 1)
+
+[node name="Buskar" type="Node2D" parent="."]
+
+[node name="Buske" parent="Buskar" instance=ExtResource("2_303lf")]
+position = Vector2(88, 45)
+
+[node name="Buske2" parent="Buskar" instance=ExtResource("2_303lf")]
+position = Vector2(-102, -42)
+
+[node name="Buske3" parent="Buskar" instance=ExtResource("2_303lf")]
+position = Vector2(-102, 56)
+
+[node name="Buske4" parent="Buskar" instance=ExtResource("2_303lf")]
+position = Vector2(76, -41)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_6u201")]
+position = Vector2(1, 0)
 Speed = 75.0
 Acceleration = 3.0
 Friction = 10.0

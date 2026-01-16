@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2nmf1b7m2v7b"]
+[gd_scene load_steps=11 format=3 uid="uid://c2nmf1b7m2v7b"]
 
 [ext_resource type="Script" uid="uid://h60ayaayl8b8" path="res://Kod/Player.gd" id="1_bipid"]
 [ext_resource type="Texture2D" uid="uid://dbhp185l48uee" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0476_Capa-477.png" id="2_laho1"]
@@ -53,6 +53,10 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqwvk"]
+radius = 5.0
+height = 14.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_bipid")
 
@@ -61,6 +65,7 @@ sprite_frames = SubResource("SpriteFrames_2p8rw")
 animation = &"Uppåt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xqwvk")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
