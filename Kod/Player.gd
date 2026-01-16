@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var Speed = 300.0
 @export var Acceleration = 2.0
+@export var Friction = 12.0
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -17,10 +18,12 @@ func get_input():
 func _process(delta: float) -> void:
 	var PlayerInput = get_input()
 	
-	velocity = lerp(velocity, PlayerInput * Speed, delta * Acceleration)
-	
-	_animation(input_vector)
-	
+	if PlayerInput != Vector2.ZERO:
+		velocity = lerp(velocity, PlayerInput * Speed, delta * Acceleration)
+	else:
+		velocity = velocity.lerp(Vector2.ZERO, Friction * delta)
+
+	_animation(PlayerInput)
 	move_and_slide()
 	
 func _animation(input):
