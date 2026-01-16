@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6408ins3uock"]
+
+[ext_resource type="Script" uid="uid://d2o6li63w6yuv" path="res://fiende.gd" id="1_t56xa"]
+[ext_resource type="Texture2D" uid="uid://1l7fw78ywhnr" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0413_Capa-414.png" id="2_fgffb"]
+[ext_resource type="Texture2D" uid="uid://b154reok3xsgr" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0414_Capa-415.png" id="3_046cf"]
+[ext_resource type="Texture2D" uid="uid://cvg1ivbl8ckmq" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0416_Capa-417.png" id="4_poirj"]
+[ext_resource type="Texture2D" uid="uid://dpia81sonb3b4" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0417_Capa-418.png" id="5_cytoi"]
+[ext_resource type="Texture2D" uid="uid://dyqwslt4wake" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0419_Capa-420.png" id="6_sp8ko"]
+[ext_resource type="Texture2D" uid="uid://b6aou0o0q2ota" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0420_Capa-421.png" id="7_wdip6"]
+[ext_resource type="Texture2D" uid="uid://bpgaypf8ntbvp" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0412_Capa-413.png" id="8_fsme4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3sx7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fgffb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_046cf")
+}],
+"loop": true,
+"name": &"Go_down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_poirj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cytoi")
+}],
+"loop": true,
+"name": &"Go_left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_sp8ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wdip6")
+}],
+"loop": true,
+"name": &"Go_up",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fsme4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8f7dc"]
+radius = 6.0827627
+
+[node name="Fiende" type="CharacterBody2D"]
+disable_mode = 2
+script = ExtResource("1_t56xa")
+Speed = 25.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e3sx7")
+animation = &"Go_down"
+frame_progress = 0.43023893
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8f7dc")
+one_way_collision = true
