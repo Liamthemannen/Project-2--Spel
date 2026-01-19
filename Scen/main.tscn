@@ -36,3 +36,12 @@ Friction = 10.0
 
 [node name="Fiende" parent="." instance=ExtResource("3_6u201")]
 position = Vector2(-59, 19)
+
+[node name="Fiende2" parent="." instance=ExtResource("3_6u201")]
+position = Vector2(-49, -30)
+
+[node name="Fiende3" parent="." instance=ExtResource("3_6u201")]
+position = Vector2(49, -25)
+
+[node name="Fiende4" parent="." instance=ExtResource("3_6u201")]
+position = Vector2(38, 9)
