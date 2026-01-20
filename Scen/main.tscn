@@ -37,16 +37,18 @@ Speed = 75.0
 Acceleration = 3.0
 Friction = 10.0
 
-[node name="Fiende" parent="." instance=ExtResource("3_6u201")]
+[node name="fiender" type="Node" parent="."]
+
+[node name="Fiende" parent="fiender" instance=ExtResource("3_6u201")]
 position = Vector2(-59, 19)
 
-[node name="Fiende2" parent="." instance=ExtResource("3_6u201")]
+[node name="Fiende2" parent="fiender" instance=ExtResource("3_6u201")]
 position = Vector2(-49, -30)
 
-[node name="Fiende3" parent="." instance=ExtResource("3_6u201")]
+[node name="Fiende3" parent="fiender" instance=ExtResource("3_6u201")]
 position = Vector2(49, -25)
 
-[node name="Fiende4" parent="." instance=ExtResource("3_6u201")]
+[node name="Fiende4" parent="fiender" instance=ExtResource("3_6u201")]
 position = Vector2(38, 9)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -58,4 +60,4 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.8, 0.8)
