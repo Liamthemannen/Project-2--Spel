@@ -9,6 +9,7 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * Speed
 	move_and_slide()
 	_animation()
+
 	
 func _animation():
 	if velocity.x > 0:
@@ -17,9 +18,3 @@ func _animation():
 	elif velocity.x < 0:
 		animation_enemy.flip_h = false
 		animation_enemy.play("Go_left")
-		#
-	#if velocity.x == 0:
-		#if velocity.y > 0:
-			#animation_enemy.play("Go_up")
-		#elif velocity.y < 0:	
-			#animation_enemy.play("Go_down")
