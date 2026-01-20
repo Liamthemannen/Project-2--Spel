@@ -9,7 +9,7 @@ var speed: float = 120.0
 func _physics_process(delta: float) -> void:
 	global_position += Vector2(1,0).rotated(rotation) * speed * delta
 	Shadow.position = Vector2(-2,2).rotated(-rotation)
-	if RayCast.is.colliding() and !RayCast.get_collider().get("IS_PLAYER"):
+	if RayCast.is_colliding() and !RayCast.get_collider().get("IS_PLAYER"):
 		AnimPlayer.play("dissapear")
 
 
