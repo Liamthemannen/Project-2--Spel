@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpt1j6hgafrji"]
+[gd_scene load_steps=6 format=3 uid="uid://dpt1j6hgafrji"]
 
+[ext_resource type="Script" uid="uid://cn57eqad1ux0b" path="res://Scen/main.gd" id="1_wlob7"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
 [ext_resource type="PackedScene" uid="uid://b6408ins3uock" path="res://Scen/fiende.tscn" id="3_6u201"]
+[ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_wlob7")
 
 [node name="Bakgrund" type="ColorRect" parent="."]
 offset_left = -143.0
@@ -45,3 +48,14 @@ position = Vector2(49, -25)
 
 [node name="Fiende4" parent="." instance=ExtResource("3_6u201")]
 position = Vector2(38, 9)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Paus_menu" parent="CanvasLayer" instance=ExtResource("5_fa47m")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+scale = Vector2(0.2, 0.2)
