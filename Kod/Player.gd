@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var Speed = 300.0
 @export var Acceleration = 2.0
 @export var Friction = 12.0
+@export var health = 100.0
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -25,7 +26,15 @@ func _process(delta: float) -> void:
 
 	_animation(PlayerInput)
 	move_and_slide()
-	
+func _physics_process(delta: float) -> void:
+	const Damage_rate = 5.0
+	var overlapping_mobs = %HurtArea.get_overlapping_bodies()
+	if overlapping_mobs.size() > 0:
+		health -= Damage_rate * overlapping_mobs.size() * delta
+		%Health_bar.value = health
+		if health <= 0.0:
+			print("Du är död!")
+
 func _animation(input):
 	if input.x > 0:
 		animation.flip_h = false
