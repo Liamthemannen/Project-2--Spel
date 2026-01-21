@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var spel_karaktär: CharacterBody2D = $"../SpelKaraktär"
+@onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
+
 @export var Speed = 300.0
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 
