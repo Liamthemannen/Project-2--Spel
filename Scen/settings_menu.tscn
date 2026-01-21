@@ -29,13 +29,19 @@ text = "Volume
 
 [node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="Mute_knapp" type="CheckBox" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+value = 50.0
 
 [node name="Mute" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Mute"
 
+[node name="Mute_knapp" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreenControl" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fullscreen"
+
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Mute_knapp" to="." method="_on_mute_knapp_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/FullScreenControl" to="." method="_on_full_screen_control_toggled"]
