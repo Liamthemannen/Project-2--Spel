@@ -26,9 +26,11 @@ func _physics_process(delta: float) -> void:
 func _shoot():
 	var new_bullet = bullet_scene.instantiate()
 	new_bullet.global_position = ShootPos.global_position
-	new_bullet.global_rotation = ShootPos.global_rotation
+	new_bullet.global_rotation = ShootPos.global_rotation 
+	
 	new_bullet.speed = 120.0
-	get_parent().add_child(new_bullet)
+	get_tree().root.add_child(new_bullet)
+	
 	
 
 
