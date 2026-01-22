@@ -1,6 +1,6 @@
 extends CharacterBody2D
-
 @onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
+
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var Speed = 300.0
@@ -22,8 +22,8 @@ func _animation():
 		animation_enemy.flip_h = false
 		animation_enemy.play("Go_left")
 		
-func take_damage():
-	health -= 1
+func take_damage_shotgun():
+	health -= 3
 	
 	if health <= 0:
 		queue_free()
