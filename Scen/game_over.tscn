@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq3ffsbpxn1nk"]
+
+[ext_resource type="Script" uid="uid://dbrafm0ml5tye" path="res://Kod/game_over.gd" id="1_2ouyb"]
+[ext_resource type="FontFile" uid="uid://cny1yd8tx5chd" path="res://Design/BoldPixels.ttf" id="2_2ouyb"]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_2ouyb")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 433.0
+offset_top = 269.0
+offset_right = -418.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2ouyb")
+theme_override_font_sizes/font_size = 75
+text = "Du dog:("
+
+[node name="spela" type="Button" parent="."]
+visible = false
+offset_left = 530.0
+offset_top = 382.0
+offset_right = 627.0
+offset_bottom = 413.0
+theme_override_colors/font_pressed_color = Color(0.10748, 0.10748, 0.10748, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_2ouyb")
+text = "Försök igen"
+
+[node name="avsluta" type="Button" parent="."]
+visible = false
+offset_left = 546.0
+offset_top = 433.0
+offset_right = 612.0
+offset_bottom = 464.0
+theme_override_colors/font_pressed_color = Color(0.105882, 0.105882, 0.105882, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_2ouyb")
+text = "Avsluta"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.741176, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="spela" to="." method="_on_spela_pressed"]
+[connection signal="pressed" from="avsluta" to="." method="_on_avsluta_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
