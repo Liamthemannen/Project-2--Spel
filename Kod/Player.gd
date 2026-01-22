@@ -4,11 +4,8 @@ extends CharacterBody2D
 @export var Speed = 300.0
 @export var Acceleration = 2.0
 @export var Friction = 12.0
-@export var health = 100.0
-@export var Damage_rate = 5.0
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
-@onready var timer: Timer = $"../CanvasLayer/Timer"
 
 var input_vector: Vector2
 
@@ -31,19 +28,7 @@ func _process(delta: float) -> void:
 
 	_animation(PlayerInput)
 	move_and_slide()
-func _physics_process(delta: float) -> void:
-	var overlapping_mobs = %HurtArea.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-		health -= Damage_rate * overlapping_mobs.size() * delta
-		%Health_bar.value = health
-		if health <= 0.0 and timer.is_stopped():
-			Engine.time_scale = 0.5
-			timer.start()
-			
-			
-func _on_timer_timeout() -> void:
-	get_tree().change_scene_to_file("res://Scen/game_over.tscn")
-
+	
 func _animation(input):
 	if input.x > 0:
 		animation.flip_h = false

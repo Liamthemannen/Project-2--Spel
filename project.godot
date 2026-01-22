@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="Projekt 2, Spel"
-run/main_scene="uid://b3yh531udnu8j"
+run/main_scene="uid://dpt1j6hgafrji"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/stretch/mode="viewport"
 
 [input]
 
