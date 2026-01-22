@@ -12,6 +12,9 @@ extends CharacterBody2D
 
 var input_vector: Vector2
 
+func _ready():
+	add_to_group("player")
+
 
 func get_input():
 	input_vector.x = Input.get_action_strength("Go_right") - Input.get_action_strength("Go_left")

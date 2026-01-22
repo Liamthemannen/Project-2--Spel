@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnng8sprwo4q2"]
+
+[ext_resource type="Script" uid="uid://dwgreogh3v1it" path="res://Kod/weapon.gd" id="1_iv264"]
+[ext_resource type="Texture2D" uid="uid://cgf2qiblqacly" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Pickable Items and Weapons/Zombie-Tileset---_0334_Capa-335.png" id="1_rsccj"]
+
+[node name="weapon" type="Node2D"]
+script = ExtResource("1_iv264")
+
+[node name="RotationOffset" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RotationOffset"]
+texture = ExtResource("1_rsccj")
+
+[node name="shadow" type="Sprite2D" parent="RotationOffset/Sprite2D"]
+modulate = Color(0, 0, 0, 0.21568628)
+z_index = -1
+
+[node name="shoot_pos" type="Marker2D" parent="RotationOffset/Sprite2D"]
+position = Vector2(4, -1)
+
+[node name="ShootTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
