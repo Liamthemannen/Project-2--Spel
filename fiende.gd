@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
-@onready var spel_karaktär: CharacterBody2D = $"../SpelKaraktär"
-@export var Speed = 300.0
+@onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
+
+@export var Speed = 300.0
+@export var health = 3.0
+
 
 func _physics_process(delta: float) -> void:
 	var direction =  global_position.direction_to(spel_karaktär.global_position)
@@ -18,3 +21,9 @@ func _animation():
 	elif velocity.x < 0:
 		animation_enemy.flip_h = false
 		animation_enemy.play("Go_left")
+		
+func take_damage():
+	health -= 1
+	
+	if health <= 0:
+		queue_free()
