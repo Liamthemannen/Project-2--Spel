@@ -57,8 +57,6 @@ animations = [{
 radius = 6.0827627
 
 [node name="Fiende" type="CharacterBody2D"]
-disable_mode = 2
-collision_layer = 4
 motion_mode = 1
 script = ExtResource("1_t56xa")
 Speed = 25.0

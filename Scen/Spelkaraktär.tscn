@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2nmf1b7m2v7b"]
+[gd_scene load_steps=11 format=3 uid="uid://c2nmf1b7m2v7b"]
 
 [ext_resource type="Script" uid="uid://h60ayaayl8b8" path="res://Kod/Player.gd" id="1_bipid"]
 [ext_resource type="Texture2D" uid="uid://dbhp185l48uee" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0476_Capa-477.png" id="2_laho1"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dkdyl1jlo2tu3" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0478_Capa-479.png" id="4_ka6b2"]
 [ext_resource type="Texture2D" uid="uid://ch7dpsh4h3owv" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0483_Capa-484.png" id="7_phifu"]
 [ext_resource type="Texture2D" uid="uid://dyhfgjdvcsv56" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0484_Capa-485.png" id="8_uuvcp"]
-[ext_resource type="FontFile" uid="uid://cny1yd8tx5chd" path="res://Design/BoldPixels.ttf" id="9_agks7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2p8rw"]
 animations = [{
@@ -58,21 +57,9 @@ animations = [{
 radius = 5.0
 height = 14.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xqwvk"]
-radius = 7.071068
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agks7"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phifu"]
-bg_color = Color(0.2901961, 1, 0.43137255, 1)
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-
 [node name="SpelKaraktär" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_bipid")
-Damage_rate = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2p8rw")
@@ -84,30 +71,3 @@ shape = SubResource("CapsuleShape2D_xqwvk")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
-
-[node name="HurtArea" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
-shape = SubResource("CircleShape2D_xqwvk")
-
-[node name="Health_bar" type="ProgressBar" parent="."]
-unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -14.0
-offset_top = 12.0
-offset_right = 14.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("9_agks7")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/background = SubResource("StyleBoxFlat_agks7")
-theme_override_styles/fill = SubResource("StyleBoxFlat_phifu")
-value = 100.0
