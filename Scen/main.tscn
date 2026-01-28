@@ -37,7 +37,6 @@ position = Vector2(76, -41)
 Speed = 75.0
 Acceleration = 3.0
 Friction = 10.0
-Damage_rate = 0.0
 
 [node name="fiender" type="Node2D" parent="."]
 
