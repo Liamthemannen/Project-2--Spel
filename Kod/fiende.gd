@@ -1,6 +1,5 @@
 extends CharacterBody2D
 @onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
-
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var Speed = 300.0
@@ -8,8 +7,10 @@ extends CharacterBody2D
 
 
 func _physics_process(delta: float) -> void:
+	if spel_karaktär == null:
+		return
 	var direction =  global_position.direction_to(spel_karaktär.global_position)
-	velocity = direction * Speed
+	velocity = direction * Speed * delta
 	move_and_slide()
 	_animation()
 

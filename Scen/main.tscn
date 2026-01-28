@@ -39,6 +39,7 @@ Acceleration = 3.0
 Friction = 10.0
 
 [node name="fiender" type="Node2D" parent="."]
+visible = false
 
 [node name="Fiende" parent="fiender" instance=ExtResource("3_6u201")]
 position = Vector2(-59, 19)
