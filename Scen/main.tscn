@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpt1j6hgafrji"]
+[gd_scene load_steps=9 format=3 uid="uid://dpt1j6hgafrji"]
 
 [ext_resource type="Script" uid="uid://cn57eqad1ux0b" path="res://Kod/main.gd" id="1_wlob7"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
@@ -7,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
 [ext_resource type="PackedScene" uid="uid://dq3ffsbpxn1nk" path="res://Scen/game_over.tscn" id="7_adhq0"]
+
+[sub_resource type="Curve2D" id="Curve2D_adhq0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -180, -116, 0, 0, 0, 0, 170, -113, 0, 0, 0, 0, 177, 79, 0, 0, 0, 0, -182, 76, 0, 0, 0, 0, -182, 76)
+}
+point_count = 5
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wlob7")
@@ -72,5 +78,12 @@ visible = false
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 0.2
 one_shot = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_adhq0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-180, -116)
+rotation = 0.00857122
 
 [connection signal="timeout" from="CanvasLayer/Timer" to="SpelKaraktär" method="_on_timer_timeout"]

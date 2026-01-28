@@ -1,5 +1,6 @@
 extends CharacterBody2D
-@onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
+#@onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
+@onready var spel_karaktär = get_node("/root")
 
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 

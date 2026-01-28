@@ -1,5 +1,12 @@
 extends Node2D
 @onready var paus_menu: Control = $CanvasLayer/Paus_menu
+@onready var path_follow_2d: PathFollow2D = $Path2D/PathFollow2D
+
+func spawn_mob():
+	%PathFollow2D.progress_ratio = randf()
+	var new_mob = preload("res://Scen/fiende.tscn").instantiate()
+	new_mob.global_position = %PathFollow2D.global_position
+	add_child(new_mob)
 
 
 var spel_paus = false
