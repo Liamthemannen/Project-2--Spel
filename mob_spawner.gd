@@ -1,10 +1,11 @@
 extends Node2D
 
-@onready var enemy = preload("res://Scen/fiende.tscn")
-@onready var fiender: Node2D = $fiender
+@export var enemy: PackedScene
+@export var Target: Node2D
 
 
 func _on_timer_timeout() -> void:
+	print("Spawna enemy")
 	var ene = enemy.instantiate()
-	ene.position = position
-	get_parent().get_node("fiender")add_child(ene)
+	ene.player = Target
+	add_child(ene)

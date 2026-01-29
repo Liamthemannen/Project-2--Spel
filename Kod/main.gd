@@ -7,13 +7,7 @@ var spel_paus = false
 	#_spawn_mob()
 	#_spawn_mob()
 
-#func _spawn_mob():
-	#var new_enemy = preload("res://Scen/fiende.tscn").instantiate()
-	#path_follow_2d.progress_ratio = randf()
-	#new_enemy.global_position = path_follow_2d.global_position
-	#add_child(new_enemy)
-	#
-# Called when the node enters the scene tree for the first time.
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Paus"): #and !settings.visible and !input_settings.visible
 		spel_paus = !spel_paus 
