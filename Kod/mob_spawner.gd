@@ -7,5 +7,6 @@ extends Node2D
 func _on_timer_timeout() -> void:
 	print("Spawna enemy")
 	var ene = enemy.instantiate()
-	ene.player = Target
+	ene.spel_karaktär = Target
 	add_child(ene)
+	
