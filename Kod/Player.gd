@@ -20,7 +20,6 @@ func get_input():
 	return input_vector.normalized()
 	
 func _process(delta: float) -> void:
-	print(camera_2d.get_target_position())
 	var PlayerInput = get_input()
 	
 	if PlayerInput != Vector2.ZERO:
