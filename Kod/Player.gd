@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var timer: Timer = $"../CanvasLayer/Timer"
 
 var input_vector: Vector2
+@onready var camera_2d: Camera2D = $Camera2D
 
 
 func get_input():
@@ -19,6 +20,7 @@ func get_input():
 	return input_vector.normalized()
 	
 func _process(delta: float) -> void:
+	print(camera_2d.get_target_position())
 	var PlayerInput = get_input()
 	
 	if PlayerInput != Vector2.ZERO:
