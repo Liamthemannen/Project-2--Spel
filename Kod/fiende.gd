@@ -2,9 +2,11 @@ extends CharacterBody2D
 var spel_karaktär : Node2D
 
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
+@onready var label: Label = $SpelKaraktär/Label
 
 @export var Speed = 300.0
 @export var health = 3.0
+var killed_amount : int = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -27,3 +29,5 @@ func take_damage_shotgun():
 	
 	if health <= 0:
 		queue_free()
+		#killed_amount += 1
+		#label.text = str(killed_amount)

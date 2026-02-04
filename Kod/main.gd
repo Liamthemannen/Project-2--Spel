@@ -7,7 +7,6 @@ var spel_paus = false
 	#_spawn_mob()
 	#_spawn_mob()
 
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Paus"): #and !settings.visible and !input_settings.visible
 		spel_paus = !spel_paus 
