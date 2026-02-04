@@ -1,9 +1,13 @@
 extends Node2D
 @onready var paus_menu: Control = $CanvasLayer/Paus_menu
 
-
 var spel_paus = false
-# Called when the node enters the scene tree for the first time.
+#func _ready() -> void:
+	#_spawn_mob()
+	#_spawn_mob()
+	#_spawn_mob()
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Paus"): #and !settings.visible and !input_settings.visible
 		spel_paus = !spel_paus 

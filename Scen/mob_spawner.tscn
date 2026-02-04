@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1cmhwls6wa0t"]
+
+[ext_resource type="Script" uid="uid://b5lrqhfarv2en" path="res://Kod/mob_spawner.gd" id="1_he2ep"]
+[ext_resource type="PackedScene" uid="uid://b6408ins3uock" path="res://Scen/fiende.tscn" id="2_sy7to"]
+
+[node name="Mob_spawner" type="Node2D"]
+script = ExtResource("1_he2ep")
+enemy = ExtResource("2_sy7to")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
