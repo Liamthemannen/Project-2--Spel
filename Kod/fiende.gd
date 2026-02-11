@@ -1,5 +1,6 @@
 extends CharacterBody2D
 var spel_karaktär : Node2D
+@onready var scoremanager: Node = $Scoremanager
 
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 @onready var label: Label = $SpelKaraktär/Label
@@ -29,5 +30,4 @@ func take_damage_shotgun():
 	
 	if health <= 0:
 		queue_free()
-		#killed_amount += 1
-		#label.text = str(killed_amount)
+		

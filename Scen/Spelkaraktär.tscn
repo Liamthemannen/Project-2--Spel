@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c2nmf1b7m2v7b"]
+[gd_scene load_steps=17 format=3 uid="uid://c2nmf1b7m2v7b"]
 
 [ext_resource type="Script" uid="uid://h60ayaayl8b8" path="res://Kod/Player.gd" id="1_bipid"]
 [ext_resource type="Texture2D" uid="uid://dbhp185l48uee" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0476_Capa-477.png" id="2_laho1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ch7dpsh4h3owv" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0483_Capa-484.png" id="7_phifu"]
 [ext_resource type="Texture2D" uid="uid://dyhfgjdvcsv56" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0484_Capa-485.png" id="8_uuvcp"]
 [ext_resource type="FontFile" uid="uid://cny1yd8tx5chd" path="res://Design/BoldPixels.ttf" id="9_agks7"]
+[ext_resource type="Script" uid="uid://h87hsd75g6dh" path="res://Kod/label.gd" id="9_uuvcp"]
 [ext_resource type="PackedScene" uid="uid://cdpj657drjyu4" path="res://Scen/shotgun.tscn" id="10_phifu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2p8rw"]
@@ -98,6 +99,7 @@ offset_bottom = 23.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 36
 text = "0"
+script = ExtResource("9_uuvcp")
 
 [node name="HurtArea" type="Area2D" parent="." groups=["player"]]
 unique_name_in_owner = true
