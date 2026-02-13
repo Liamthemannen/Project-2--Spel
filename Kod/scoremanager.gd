@@ -5,3 +5,6 @@ var enemy_amount = 0
 
 func add_score():
 	killed_amount += 1
+
+func reset_score():
+	killed_amount = 0

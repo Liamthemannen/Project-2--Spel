@@ -2,7 +2,7 @@ extends CharacterBody2D
 var spel_karaktär : Node2D
 
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
-@onready var label: Label = $SpelKaraktär/Label
+
 
 @export var Speed = 300.0
 @export var health = 3.0
