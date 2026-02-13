@@ -10,6 +10,7 @@ func _on_timer_timeout() -> void:
 
 
 func _on_spela_pressed() -> void: # Återupptar spelet 
+	Scoremanager.enemy_amount = 0
 	Engine.time_scale = 1
 	get_tree().change_scene_to_file("res://Scen/main.tscn")
 
