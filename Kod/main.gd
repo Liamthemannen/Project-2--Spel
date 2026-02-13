@@ -1,11 +1,11 @@
 extends Node2D
 @onready var paus_menu: Control = $CanvasLayer/Paus_menu
+@export var Zombie: CharacterBody2D
+@export var label: Label
 
 var spel_paus = false
-#func _ready() -> void:
-	#_spawn_mob()
-	#_spawn_mob()
-	#_spawn_mob()
+var killed_amount = 0
+
 
 
 func _unhandled_input(event: InputEvent) -> void:

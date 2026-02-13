@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpt1j6hgafrji"]
+[gd_scene load_steps=10 format=3 uid="uid://dpt1j6hgafrji"]
 
 [ext_resource type="Script" uid="uid://cn57eqad1ux0b" path="res://Kod/main.gd" id="1_wlob7"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
+[ext_resource type="Script" uid="uid://dy1hqpbjmlesm" path="res://Kod/scoremanager.gd" id="2_8lypi"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
@@ -16,6 +17,9 @@ point_count = 6
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wlob7")
+
+[node name="Scoremanager" type="Node" parent="."]
+script = ExtResource("2_8lypi")
 
 [node name="Bakgrund" type="ColorRect" parent="."]
 offset_left = -143.0
