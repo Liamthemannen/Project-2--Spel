@@ -22,6 +22,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		# Felhanering så man ser till att inputen är hanterad
 		get_tree().root.get_viewport().set_input_as_handled()
-#func add_score():
-	#killed_amount += 1
-	#label.text = str(killed_amount)
