@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdpywtkm7inla"]
+[gd_scene format=3 uid="uid://cdpywtkm7inla"]
 
 [ext_resource type="Texture2D" uid="uid://dpcy2xmv14pu7" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Pickable Items and Weapons/Zombie-Tileset---_0343_Capa-344.png" id="1_fyw1y"]
 [ext_resource type="Script" uid="uid://bdrli2rfjvmf4" path="res://Kod/bullet_shotgun.gd" id="1_i72d0"]
@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks011"]
 radius = 5.0
 
-[node name="BulletShotgun" type="Area2D"]
+[node name="BulletShotgun" type="Area2D" unique_id=609076771]
 top_level = true
 rotation = -5.4352617
 collision_layer = 0
@@ -15,11 +15,11 @@ script = ExtResource("1_i72d0")
 SPEED = 500.0
 RANGE = 40.0
 
-[node name="ShotgunBullet" type="Sprite2D" parent="."]
+[node name="ShotgunBullet" type="Sprite2D" parent="." unique_id=639259823]
 rotation = 4.712389
 texture = ExtResource("1_fyw1y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=291473901]
 shape = SubResource("CircleShape2D_ks011")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

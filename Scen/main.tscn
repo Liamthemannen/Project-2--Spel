@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
 [ext_resource type="Script" uid="uid://dy1hqpbjmlesm" path="res://Kod/scoremanager.gd" id="2_8lypi"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
+[ext_resource type="PackedScene" uid="uid://b6408ins3uock" path="res://Scen/fiende.tscn" id="3_6u201"]
+[ext_resource type="PackedScene" uid="uid://bksfka8lnom2p" path="res://Scen/shop2.tscn" id="3_52smi"]
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
 [ext_resource type="PackedScene" uid="uid://dq3ffsbpxn1nk" path="res://Scen/game_over.tscn" id="7_adhq0"]
@@ -28,6 +30,9 @@ offset_right = -102.437706
 offset_bottom = -39.514538
 scale = Vector2(7.11373, 3.904982)
 color = Color(0.2784314, 0.20784314, 0.17254902, 1)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_52smi")]
+position = Vector2(112, -37)
 
 [node name="Buskar" type="Node2D" parent="."]
 
