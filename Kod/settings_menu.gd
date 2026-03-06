@@ -1,6 +1,4 @@
 extends Control
-@onready var settings_menu: Control = $"."
-@onready var paus_menu: Control = $"../Paus_menu"
 
 
 func _on_volume_value_changed(value: float) -> void:
@@ -17,7 +15,3 @@ func _on_full_screen_control_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-
-func _on_button_pressed() -> void:
-	settings_menu.visible = false
-	paus_menu.visible = true	

@@ -11,7 +11,6 @@ extends CharacterBody2D
 @onready var timer: Timer = $"../CanvasLayer/Timer"
 
 var input_vector: Vector2
-@onready var camera_2d: Camera2D = $Camera2D
 
 
 func get_input():

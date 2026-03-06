@@ -148,8 +148,4 @@ text = "BUY"
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/Label/Fire_Rate" to="." method="_on_fire_rate_pressed"]
-<<<<<<< HEAD
-=======
-[connection signal="pressed" from="Control/Label3/Health" to="." method="_on_health_pressed"]
->>>>>>> eb0d623e9efbf4bc92a2ba7a5529e650741a3aff
 [connection signal="pressed" from="Control/Label4/Damage" to="." method="_on_damage_pressed"]

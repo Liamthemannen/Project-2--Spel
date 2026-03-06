@@ -1,27 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpt1j6hgafrji"]
+[gd_scene load_steps=9 format=3 uid="uid://dpt1j6hgafrji"]
 
 [ext_resource type="Script" uid="uid://cn57eqad1ux0b" path="res://Kod/main.gd" id="1_wlob7"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
-[ext_resource type="Script" uid="uid://dy1hqpbjmlesm" path="res://Kod/scoremanager.gd" id="2_8lypi"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
 [ext_resource type="PackedScene" uid="uid://b6408ins3uock" path="res://Scen/fiende.tscn" id="3_6u201"]
 [ext_resource type="PackedScene" uid="uid://bksfka8lnom2p" path="res://Scen/shop2.tscn" id="3_52smi"]
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
 [ext_resource type="PackedScene" uid="uid://dq3ffsbpxn1nk" path="res://Scen/game_over.tscn" id="7_adhq0"]
-[ext_resource type="PackedScene" uid="uid://b1cmhwls6wa0t" path="res://Scen/mob_spawner.tscn" id="8_8lypi"]
-
-[sub_resource type="Curve2D" id="Curve2D_adhq0"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -170, -103, 0, 0, 0, 0, 168, -102, 0, 0, 0, 0, 163, 93, 0, 0, 0, 0, -169, 92, 0, 0, 0, 0, -171, -103, 0, 0, 0, 0, 0, 0)
-}
-point_count = 6
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wlob7")
-
-[node name="Scoremanager" type="Node" parent="."]
-script = ExtResource("2_8lypi")
 
 [node name="Bakgrund" type="ColorRect" parent="."]
 offset_left = -143.0
@@ -52,22 +41,21 @@ position = Vector2(76, -41)
 Speed = 75.0
 Acceleration = 3.0
 Friction = 10.0
-
-[node name="Path2D" type="Path2D" parent="SpelKaraktär"]
-position = Vector2(-1, 0)
-curve = SubResource("Curve2D_adhq0")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="SpelKaraktär/Path2D"]
-position = Vector2(-170.89473, -92.73644)
-rotation = -1.5810524
-progress = 1049.85
-
-[node name="Marker2D" type="Marker2D" parent="SpelKaraktär/Path2D/PathFollow2D"]
-
-[node name="Mob_spawner" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("8_8lypi")]
-Target = NodePath("../SpelKaraktär")
+Damage_rate = 0.0
 
 [node name="fiender" type="Node2D" parent="."]
+
+[node name="Fiende" parent="fiender" instance=ExtResource("3_6u201")]
+position = Vector2(-59, 19)
+
+[node name="Fiende2" parent="fiender" instance=ExtResource("3_6u201")]
+position = Vector2(-49, -30)
+
+[node name="Fiende3" parent="fiender" instance=ExtResource("3_6u201")]
+position = Vector2(49, -25)
+
+[node name="Fiende4" parent="fiender" instance=ExtResource("3_6u201")]
+position = Vector2(38, 9)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

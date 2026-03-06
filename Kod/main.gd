@@ -1,16 +1,11 @@
 extends Node2D
 @onready var paus_menu: Control = $CanvasLayer/Paus_menu
-@onready var settings_menu: Control = $CanvasLayer/Settings_menu
-@export var Zombie: CharacterBody2D
-@export var label: Label
+
 
 var spel_paus = false
-var killed_amount = 0
-
-
-
+# Called when the node enters the scene tree for the first time.
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("Paus") and !settings_menu.visible: #and !input_settings.visible
+	if event.is_action_pressed("Paus"): #and !settings.visible and !input_settings.visible
 		spel_paus = !spel_paus 
 		if spel_paus:
 			# Pausa spelet, stoppar musiken och frys tiden
