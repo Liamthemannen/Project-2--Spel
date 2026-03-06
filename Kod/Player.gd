@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var Friction = 12.0
 @export var health = 100.0
 @export var Damage_rate = 5.0
+@export var Armour = 0.0
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $"../CanvasLayer/Timer"
@@ -32,8 +33,18 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	var overlapping_mobs = %HurtArea.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
-		health -= Damage_rate * overlapping_mobs.size() * delta
-		%Health_bar.value = health
+		var raw_damage = Damage_rate * overlapping_mobs.size() * delta
+		
+		if Armour > 0:
+			var armour_damage = min(raw_damage, Armour)
+			Armour -= armour_damage
+			raw_damage -= armour_damage
+			%Armour.value = Armour
+		
+		if raw_damage > 0:
+			health -= raw_damage
+			%Health_bar.value = health
+		
 		if health <= 0.0 and timer.is_stopped():
 			Engine.time_scale = 0.5
 			timer.start()
