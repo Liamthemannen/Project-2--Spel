@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq3ffsbpxn1nk"]
+[gd_scene format=3 uid="uid://dq3ffsbpxn1nk"]
 
 [ext_resource type="Script" uid="uid://dbrafm0ml5tye" path="res://Kod/game_over.gd" id="1_2ouyb"]
 [ext_resource type="FontFile" uid="uid://cny1yd8tx5chd" path="res://Design/BoldPixels.ttf" id="2_2ouyb"]
+[ext_resource type="PackedScene" uid="uid://clbhjxlpk23st" path="res://Scen/HS.tscn" id="3_aveva"]
 
-[node name="GameOver" type="CanvasLayer"]
+[node name="GameOver" type="CanvasLayer" unique_id=250735522]
 script = ExtResource("1_2ouyb")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=867917253]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -20,7 +21,7 @@ theme_override_fonts/font = ExtResource("2_2ouyb")
 theme_override_font_sizes/font_size = 75
 text = "Du dog:("
 
-[node name="spela" type="Button" parent="."]
+[node name="spela" type="Button" parent="." unique_id=1664812980]
 visible = false
 offset_left = 530.0
 offset_top = 382.0
@@ -31,7 +32,7 @@ theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_2ouyb")
 text = "Försök igen"
 
-[node name="avsluta" type="Button" parent="."]
+[node name="avsluta" type="Button" parent="." unique_id=586098856]
 visible = false
 offset_left = 546.0
 offset_top = 433.0
@@ -42,7 +43,7 @@ theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("2_2ouyb")
 text = "Avsluta"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1731331295]
 z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,10 +53,17 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.741176, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1602607066]
 wait_time = 0.5
 one_shot = true
 autostart = true
+
+[node name="Control" parent="." unique_id=1294782098 instance=ExtResource("3_aveva")]
+offset_left = 670.0
+offset_top = 36.0
+offset_right = 254.0
+offset_bottom = 36.0
+scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="spela" to="." method="_on_spela_pressed"]
 [connection signal="pressed" from="avsluta" to="." method="_on_avsluta_pressed"]
