@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bksfka8lnom2p"]
+[gd_scene format=3 uid="uid://bksfka8lnom2p"]
 
 [ext_resource type="Texture2D" uid="uid://dm2digvvfnrm8" path="res://Design/GourmetMarketStalls.png" id="1_1pd2d"]
 [ext_resource type="Script" uid="uid://ca8oc4bmscka1" path="res://Kod/shop_2.gd" id="1_n77tp"]

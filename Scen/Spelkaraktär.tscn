@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2nmf1b7m2v7b"]
+[gd_scene format=3 uid="uid://c2nmf1b7m2v7b"]
 
 [ext_resource type="Script" uid="uid://h60ayaayl8b8" path="res://Kod/Player.gd" id="1_bipid"]
 [ext_resource type="Texture2D" uid="uid://dbhp185l48uee" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Player Character Walking Animation Frames/Zombie-Tileset---_0476_Capa-477.png" id="2_laho1"]
@@ -71,26 +71,26 @@ bg_color = Color(0.2901961, 1, 0.43137255, 1)
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 
-[node name="SpelKaraktär" type="CharacterBody2D"]
+[node name="SpelKaraktär" type="CharacterBody2D" unique_id=480974099]
 position = Vector2(1, 0)
 motion_mode = 1
 script = ExtResource("1_bipid")
 Damage_rate = 10.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641351186]
 sprite_frames = SubResource("SpriteFrames_2p8rw")
 animation = &"Uppåt"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618939876]
 shape = SubResource("CapsuleShape2D_xqwvk")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1400934343]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=810036933]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=325156284]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -101,15 +101,15 @@ theme_override_font_sizes/font_size = 36
 text = "0"
 script = ExtResource("9_uuvcp")
 
-[node name="HurtArea" type="Area2D" parent="." groups=["player"]]
+[node name="HurtArea" type="Area2D" parent="." unique_id=649584362 groups=["player"]]
 unique_name_in_owner = true
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea" unique_id=1363662506]
 shape = SubResource("CircleShape2D_xqwvk")
 
-[node name="Health_bar" type="ProgressBar" parent="."]
+[node name="Health_bar" type="ProgressBar" parent="." unique_id=545035952]
 unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
@@ -128,4 +128,4 @@ theme_override_styles/background = SubResource("StyleBoxFlat_agks7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_phifu")
 value = 100.0
 
-[node name="Shotgun" parent="." instance=ExtResource("10_phifu")]
+[node name="Shotgun" parent="." unique_id=135218674 instance=ExtResource("10_phifu")]
