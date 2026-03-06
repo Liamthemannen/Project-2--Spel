@@ -1,10 +1,12 @@
 extends CharacterBody2D
-@onready var spel_karaktär: CharacterBody2D = $"../../SpelKaraktär"
+var spel_karaktär : Node2D
 
 @onready var animation_enemy: AnimatedSprite2D = $AnimatedSprite2D
 
+
 @export var Speed = 300.0
 @export var health = 3.0
+var killed_amount : int = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -26,4 +28,6 @@ func take_damage_shotgun():
 	health -= 3
 	
 	if health <= 0:
+		Scoremanager.add_score()
 		queue_free()
+		
