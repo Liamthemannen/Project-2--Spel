@@ -14,6 +14,6 @@ func _on_close_pressed() -> void:
 
 func _on_fire_rate_pressed() -> void:
 	shotgun_script.timer.wait_time -= 0.1 
-
-
-		
+	
+func _on_damage_pressed() -> void:
+	pass # Replace with function body.
