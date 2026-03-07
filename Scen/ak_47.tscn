@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://g61rcl6tp63h"]
+[gd_scene format=3 uid="uid://m602c61wdd7i"]
 
-[node name="Ak47" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://clmah6juswie3" path="res://Design/Egen design/M4 pixelgun(1).png" id="1_qusm6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_asut3"]
+
+[node name="Ak47" type="Area2D" unique_id=989580152]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=145793065]
+shape = SubResource("CircleShape2D_asut3")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=78298361]
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=1204243792]
+texture = ExtResource("1_qusm6")
+
+[node name="Marker2D" type="Marker2D" parent="Marker2D/Sprite2D" unique_id=1780724819]
+
+[node name="Timer" type="Timer" parent="." unique_id=258187324]
