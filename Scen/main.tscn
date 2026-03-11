@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
 [ext_resource type="PackedScene" uid="uid://dq3ffsbpxn1nk" path="res://Scen/game_over.tscn" id="7_adhq0"]
 [ext_resource type="PackedScene" uid="uid://b1cmhwls6wa0t" path="res://Scen/mob_spawner.tscn" id="8_8lypi"]
+[ext_resource type="PackedScene" uid="uid://bdrut853von1y" path="res://Scen/Staket.tscn" id="10_s2m4i"]
 
 [sub_resource type="Curve2D" id="Curve2D_adhq0"]
 _data = {
@@ -23,11 +24,11 @@ script = ExtResource("1_wlob7")
 script = ExtResource("2_8lypi")
 
 [node name="Bakgrund" type="ColorRect" parent="." unique_id=534938032]
-offset_left = -143.0
-offset_top = -81.0
-offset_right = -102.437706
-offset_bottom = -39.514538
-scale = Vector2(22.15373, 11.824984)
+offset_left = -1024.0
+offset_top = -355.0
+offset_right = -983.4377
+offset_bottom = -313.51453
+scale = Vector2(85.714775, 36.7601)
 color = Color(0.2784314, 0.20784314, 0.17254902, 1)
 
 [node name="StaticBody2D" parent="." unique_id=417274659 instance=ExtResource("3_52smi")]
@@ -130,5 +131,9 @@ visible = false
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=660976202]
 wait_time = 0.2
 one_shot = true
+
+[node name="Staket" parent="." unique_id=351351791 instance=ExtResource("10_s2m4i")]
+position = Vector2(-349, -243)
+scale = Vector2(0.06753812, 0.04841507)
 
 [connection signal="timeout" from="CanvasLayer/Timer" to="SpelKaraktär" method="_on_timer_timeout"]
