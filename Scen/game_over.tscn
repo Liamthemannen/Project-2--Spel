@@ -59,10 +59,10 @@ one_shot = true
 autostart = true
 
 [node name="Control" parent="." unique_id=1294782098 instance=ExtResource("3_aveva")]
-offset_left = 670.0
-offset_top = 36.0
-offset_right = 254.0
-offset_bottom = 36.0
+offset_left = 607.0
+offset_top = 84.0
+offset_right = 191.0
+offset_bottom = 84.0
 scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="spela" to="." method="_on_spela_pressed"]
