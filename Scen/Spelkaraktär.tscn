@@ -77,20 +77,20 @@ motion_mode = 1
 script = ExtResource("1_bipid")
 Damage_rate = 10.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1641351186]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1901451659]
 sprite_frames = SubResource("SpriteFrames_2p8rw")
 animation = &"Uppåt"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618939876]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=962004179]
 shape = SubResource("CapsuleShape2D_xqwvk")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1400934343]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=888276286]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=810036933]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1711828178]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=325156284]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=302633377]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -116,16 +116,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -14.0
-offset_top = 12.0
-offset_right = 14.0
-offset_bottom = 24.0
+offset_left = -13.0
+offset_top = 8.0
+offset_right = 13.0
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("9_agks7")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 5
 theme_override_styles/background = SubResource("StyleBoxFlat_agks7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_phifu")
 value = 100.0
 
-[node name="Shotgun" parent="." unique_id=135218674 instance=ExtResource("10_phifu")]
+[node name="Shotgun" parent="." unique_id=1848993672 instance=ExtResource("10_phifu")]
+
+[node name="Armour" type="ProgressBar" parent="." unique_id=399802558]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = 12.0
+offset_right = 13.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_agks7")
+theme_override_font_sizes/font_size = 1

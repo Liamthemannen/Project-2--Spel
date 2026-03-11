@@ -113,13 +113,13 @@ autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="Control" unique_id=134753678]
 layout_mode = 0
-offset_left = 406.0
-offset_top = 120.0
-offset_right = 458.0
-offset_bottom = 143.0
-text = "Health"
+offset_left = 424.0
+offset_top = 124.0
+offset_right = 484.0
+offset_bottom = 147.0
+text = "Armour"
 
-[node name="Health" type="Button" parent="Control/Label3" unique_id=1770026336]
+[node name="Armour" type="Button" parent="Control/Label3" unique_id=1770026336]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 33.0
@@ -148,3 +148,5 @@ text = "BUY"
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/Label/Fire_Rate" to="." method="_on_fire_rate_pressed"]
+[connection signal="pressed" from="Control/Label3/Armour" to="." method="_on_armour_pressed"]
+[connection signal="pressed" from="Control/Label3/Armour" to="." method="_on_health_pressed"]
