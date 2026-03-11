@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpt1j6hgafrji"]
+[gd_scene format=3 uid="uid://dpt1j6hgafrji"]
 
 [ext_resource type="Script" uid="uid://cn57eqad1ux0b" path="res://Kod/main.gd" id="1_wlob7"]
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
 [ext_resource type="Script" uid="uid://dy1hqpbjmlesm" path="res://Kod/scoremanager.gd" id="2_8lypi"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
-[ext_resource type="PackedScene" uid="uid://b6408ins3uock" path="res://Scen/fiende.tscn" id="3_6u201"]
 [ext_resource type="PackedScene" uid="uid://bksfka8lnom2p" path="res://Scen/shop2.tscn" id="3_52smi"]
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
@@ -17,61 +16,103 @@ _data = {
 }
 point_count = 6
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1790108503]
 script = ExtResource("1_wlob7")
 
-[node name="Scoremanager" type="Node" parent="."]
+[node name="Scoremanager" type="Node" parent="." unique_id=1632432962]
 script = ExtResource("2_8lypi")
 
-[node name="Bakgrund" type="ColorRect" parent="."]
+[node name="Bakgrund" type="ColorRect" parent="." unique_id=534938032]
 offset_left = -143.0
 offset_top = -81.0
 offset_right = -102.437706
 offset_bottom = -39.514538
-scale = Vector2(7.11373, 3.904982)
+scale = Vector2(22.15373, 11.824984)
 color = Color(0.2784314, 0.20784314, 0.17254902, 1)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_52smi")]
+[node name="StaticBody2D" parent="." unique_id=417274659 instance=ExtResource("3_52smi")]
 position = Vector2(112, -37)
 
-[node name="Buskar" type="Node2D" parent="."]
+[node name="Buskar" type="Node2D" parent="." unique_id=147295037]
 
-[node name="Buske" parent="Buskar" instance=ExtResource("2_303lf")]
+[node name="Buske" parent="Buskar" unique_id=157933584 instance=ExtResource("2_303lf")]
 position = Vector2(88, 45)
 
-[node name="Buske2" parent="Buskar" instance=ExtResource("2_303lf")]
+[node name="Buske2" parent="Buskar" unique_id=1052704402 instance=ExtResource("2_303lf")]
 position = Vector2(-102, -42)
 
-[node name="Buske3" parent="Buskar" instance=ExtResource("2_303lf")]
+[node name="Buske3" parent="Buskar" unique_id=2031317740 instance=ExtResource("2_303lf")]
 position = Vector2(-102, 56)
 
-[node name="Buske4" parent="Buskar" instance=ExtResource("2_303lf")]
+[node name="Buske4" parent="Buskar" unique_id=1498265995 instance=ExtResource("2_303lf")]
 position = Vector2(76, -41)
 
-[node name="SpelKaraktär" parent="." instance=ExtResource("2_6u201")]
+[node name="Buske4" parent="Buskar/Buske4" unique_id=1002592548 instance=ExtResource("2_303lf")]
+position = Vector2(150, 8)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4" unique_id=1799866066 instance=ExtResource("2_303lf")]
+position = Vector2(131, -10)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4" unique_id=1428101295 instance=ExtResource("2_303lf")]
+position = Vector2(-57, 107)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4" unique_id=842528544 instance=ExtResource("2_303lf")]
+position = Vector2(-341, 93)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1110507977 instance=ExtResource("2_303lf")]
+position = Vector2(209, 7)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=784470070 instance=ExtResource("2_303lf")]
+position = Vector2(189, 93)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1477249798 instance=ExtResource("2_303lf")]
+position = Vector2(219, -8)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=196046000 instance=ExtResource("2_303lf")]
+position = Vector2(8, -125)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=2124994713 instance=ExtResource("2_303lf")]
+position = Vector2(-164, -87)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1628511609 instance=ExtResource("2_303lf")]
+position = Vector2(164, -62)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1363064054 instance=ExtResource("2_303lf")]
+position = Vector2(-657, 306)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=58153119 instance=ExtResource("2_303lf")]
+position = Vector2(284, 91)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1483051714 instance=ExtResource("2_303lf")]
+position = Vector2(267, -115)
+
+[node name="Buske4" parent="Buskar/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4/Buske4" unique_id=1024124637 instance=ExtResource("2_303lf")]
+position = Vector2(224, -123)
+
+[node name="SpelKaraktär" parent="." unique_id=1311431884 instance=ExtResource("2_6u201")]
 Speed = 75.0
 Acceleration = 3.0
 Friction = 10.0
 
-[node name="Path2D" type="Path2D" parent="SpelKaraktär"]
+[node name="Path2D" type="Path2D" parent="SpelKaraktär" unique_id=891694817]
 position = Vector2(-1, 0)
 curve = SubResource("Curve2D_adhq0")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="SpelKaraktär/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="SpelKaraktär/Path2D" unique_id=1033442731]
 position = Vector2(-170.89473, -92.73644)
 rotation = -1.5810524
 progress = 1049.85
 
-[node name="Marker2D" type="Marker2D" parent="SpelKaraktär/Path2D/PathFollow2D"]
+[node name="Marker2D" type="Marker2D" parent="SpelKaraktär/Path2D/PathFollow2D" unique_id=673688555]
 
-[node name="Mob_spawner" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("8_8lypi")]
+[node name="Mob_spawner" parent="." unique_id=537574534 node_paths=PackedStringArray("Target") instance=ExtResource("8_8lypi")]
 Target = NodePath("../SpelKaraktär")
 
-[node name="fiender" type="Node2D" parent="."]
+[node name="fiender" type="Node2D" parent="." unique_id=1836852261]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1371541453]
 
-[node name="Paus_menu" parent="CanvasLayer" instance=ExtResource("5_fa47m")]
+[node name="Paus_menu" parent="CanvasLayer" unique_id=1153180714 instance=ExtResource("5_fa47m")]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,13 +121,13 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 scale = Vector2(0.8, 0.8)
 
-[node name="Settings_menu" parent="CanvasLayer" instance=ExtResource("6_fa47m")]
+[node name="Settings_menu" parent="CanvasLayer" unique_id=1586610595 instance=ExtResource("6_fa47m")]
 visible = false
 
-[node name="GameOver" parent="CanvasLayer" instance=ExtResource("7_adhq0")]
+[node name="GameOver" parent="CanvasLayer" unique_id=957988610 instance=ExtResource("7_adhq0")]
 visible = false
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=660976202]
 wait_time = 0.2
 one_shot = true
 

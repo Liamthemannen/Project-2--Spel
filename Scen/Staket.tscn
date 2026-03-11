@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bdrut853von1y"]
+
+[ext_resource type="Texture2D" uid="uid://crftre6ytfh8w" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Modular Fences/Zombie-Tileset---_0126_Capa-127.png" id="1_c1au1"]
+[ext_resource type="Texture2D" uid="uid://3swvhx44a3e3" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Modular Fences/Zombie-Tileset---_0127_Capa-128.png" id="2_b8sgj"]
+[ext_resource type="Texture2D" uid="uid://cew7stpaac1iw" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Modular Fences/Zombie-Tileset---_0128_Capa-129.png" id="3_ad3ag"]
+[ext_resource type="Texture2D" uid="uid://ba4iackmft51y" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Modular Fences/Zombie-Tileset---_0129_Capa-130.png" id="4_0y6r1"]
+
+[node name="Staket" type="Node2D" unique_id=173645413]
+
+[node name="Uppe_vänster" type="Sprite2D" parent="." unique_id=1695398094]
+texture = ExtResource("1_c1au1")
+
+[node name="Uppe_höger" type="Sprite2D" parent="." unique_id=416959241]
+position = Vector2(16, 0)
+texture = ExtResource("2_b8sgj")
+
+[node name="Nere_vänster" type="Sprite2D" parent="." unique_id=952967804]
+position = Vector2(0, 14)
+texture = ExtResource("3_ad3ag")
+
+[node name="Nere höger" type="Sprite2D" parent="." unique_id=225513059]
+position = Vector2(16, 14)
+texture = ExtResource("4_0y6r1")
