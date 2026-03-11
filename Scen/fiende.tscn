@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6408ins3uock"]
+[gd_scene format=3 uid="uid://b6408ins3uock"]
 
 [ext_resource type="Script" uid="uid://d2o6li63w6yuv" path="res://Kod/fiende.gd" id="1_t56xa"]
 [ext_resource type="Texture2D" uid="uid://1l7fw78ywhnr" path="res://Design/Zombie Apocalypse Tileset/Organized separated sprites/Big Zombie Walking Animation Frames/Zombie-Tileset---_0413_Capa-414.png" id="2_fgffb"]
@@ -56,18 +56,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_8f7dc"]
 radius = 6.0827627
 
-[node name="Fiende" type="CharacterBody2D"]
+[node name="Fiende" type="CharacterBody2D" unique_id=327676698]
 disable_mode = 2
 collision_layer = 4
 motion_mode = 1
 script = ExtResource("1_t56xa")
 Speed = 25.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393170096]
 sprite_frames = SubResource("SpriteFrames_e3sx7")
 animation = &"Go_down"
 frame_progress = 0.43023893
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258255855]
 shape = SubResource("CircleShape2D_8f7dc")
 one_way_collision = true

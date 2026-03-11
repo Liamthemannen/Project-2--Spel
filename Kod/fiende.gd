@@ -31,3 +31,10 @@ func take_damage_shotgun():
 		Scoremanager.add_score()
 		queue_free()
 		
+func take_damage_ak47():
+	health -= 1
+	
+	if health <= 0:
+		Scoremanager.add_score()
+		queue_free()
+		
