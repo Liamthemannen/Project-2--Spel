@@ -12,27 +12,27 @@ size = Vector2(46.121162, 44.71709)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n77tp"]
 size = Vector2(51, 60)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=280935114]
 physics_material_override = SubResource("PhysicsMaterial_n77tp")
 script = ExtResource("1_n77tp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433131107]
 position = Vector2(2.0000002, -3)
 scale = Vector2(0.8854167, 0.86160713)
 texture = ExtResource("1_1pd2d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499418991]
 position = Vector2(2.4999995, -2.4999995)
 scale = Vector2(0.8455988, 1.1405035)
 shape = SubResource("RectangleShape2D_ynftl")
 
-[node name="In_area_check" type="Area2D" parent="."]
+[node name="In_area_check" type="Area2D" parent="." unique_id=786055662]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="In_area_check"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In_area_check" unique_id=691074066]
 position = Vector2(2.5, -2)
 shape = SubResource("RectangleShape2D_n77tp")
 debug_color = Color(0.961032, 1.4439225e-06, 0.51540667, 0.41960785)
 
-[node name="shop_fönster" parent="." instance=ExtResource("3_ynftl")]
+[node name="shop_fönster" parent="." unique_id=15140292 instance=ExtResource("3_ynftl")]
 
 [connection signal="body_entered" from="In_area_check" to="." method="_on_in_area_check_body_entered"]
