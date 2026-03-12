@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bdrut853von1y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_htr8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukmpi"]
+size = Vector2(654.25, 20)
+
+[node name="Staket" type="Node2D" unique_id=351351791]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2086629560]
+scale = Vector2(16, 16)
+physics_material_override = SubResource("PhysicsMaterial_htr8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2024365838]
+position = Vector2(317.125, 0)
+shape = SubResource("RectangleShape2D_ukmpi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=128514232]
+position = Vector2(317.12497, 640)
+rotation = -3.1415925
+scale = Vector2(0.9875001, 0.9875001)
+shape = SubResource("RectangleShape2D_ukmpi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1035674350]
+position = Vector2(-0.93743896, 321.16086)
+rotation = -1.5707963
+scale = Vector2(0.97515637, 0.9875001)
+shape = SubResource("RectangleShape2D_ukmpi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1795346576]
+position = Vector2(304.18747, 640)
+rotation = -3.1415925
+scale = Vector2(0.9875001, 0.9875001)
+shape = SubResource("RectangleShape2D_ukmpi")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1535213287]
+position = Vector2(640, 334.87503)
+rotation = 1.5707964
+scale = Vector2(0.9875001, 1)
+shape = SubResource("RectangleShape2D_ukmpi")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=954061493]
+offset_left = -905.8751
+offset_top = 19.0
+offset_right = -865.8751
+offset_bottom = 59.0
+scale = Vector2(120.2994, -11.125711)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D" unique_id=2038713104]
+offset_left = 9.6875
+offset_top = 9.875
+offset_right = 49.6875
+offset_bottom = 49.875
+rotation = 1.5707964
+scale = Vector2(5911.524, 22.634132)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="StaticBody2D" unique_id=25970535]
+offset_top = 629.75
+offset_right = 40.0
+offset_bottom = 669.75
+scale = Vector2(205.12537, 33.81466)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="StaticBody2D" unique_id=1553370019]
+offset_left = 631.5
+offset_top = 19.0
+offset_right = 671.5
+offset_bottom = 59.0
+rotation = 1.5707964
+scale = Vector2(18.148823, -64.19877)
+color = Color(0, 0, 0, 1)
