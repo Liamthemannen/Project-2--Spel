@@ -6,7 +6,7 @@ func _ready():
 	var leaderboard = Scoremanager.load_leaderboard()
 	var lines = []
 	for entry in leaderboard:
-		lines.append(entry["name"] + " - " + str(int(entry["kills"])) + " kills")
+		lines.append(entry[1] + " - " + str(int(entry[0])) + " kills")
 	var label = Label.new()
 	label.text = "\n".join(lines)
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER

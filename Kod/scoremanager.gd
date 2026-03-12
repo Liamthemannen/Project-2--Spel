@@ -12,8 +12,9 @@ func reset_score():
 
 func save_score():
 	var leaderboard = load_leaderboard()
-	leaderboard.append({"kills": killed_amount, "name": player_name})
-	leaderboard.sort_custom(func(a, b): return a["kills"] > b["kills"])
+	leaderboard.append([killed_amount, player_name])
+	leaderboard.sort()
+	leaderboard.reverse()
 	var file = FileAccess.open("user://leaderboard.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(leaderboard))
 	file.close()
