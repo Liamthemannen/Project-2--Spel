@@ -3,6 +3,8 @@ extends StaticBody2D
 var shop_fönster
 var anim: AnimationPlayer
 
+
+# hämtar alla vägar till scenerna
 func _ready() -> void:
 	await get_tree().process_frame
 	
@@ -11,7 +13,7 @@ func _ready() -> void:
 	shop_fönster.visible = false
 	
 		
-		
+# om spelkaraktären går in i shopens area
 func _on_in_area_check_body_entered(body: Node2D) -> void:
 	if body.name == "SpelKaraktär":
 		get_tree().paused = true

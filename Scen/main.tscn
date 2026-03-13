@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2nmf1b7m2v7b" path="res://Scen/Spelkaraktär.tscn" id="2_6u201"]
 [ext_resource type="Script" uid="uid://dy1hqpbjmlesm" path="res://Kod/scoremanager.gd" id="2_8lypi"]
 [ext_resource type="PackedScene" uid="uid://cgkc2fjkwhe2h" path="res://Scen/Buske.tscn" id="2_303lf"]
-[ext_resource type="PackedScene" uid="uid://bksfka8lnom2p" path="res://Scen/shop2.tscn" id="3_52smi"]
+[ext_resource type="PackedScene" path="res://Scen/shop2.tscn" id="3_52smi"]
 [ext_resource type="PackedScene" uid="uid://m5bcyscvo6r8" path="res://Scen/paus_menu.tscn" id="5_fa47m"]
 [ext_resource type="PackedScene" uid="uid://c7p5t1e3ny2wk" path="res://Scen/settings_menu.tscn" id="6_fa47m"]
 [ext_resource type="PackedScene" uid="uid://dq3ffsbpxn1nk" path="res://Scen/game_over.tscn" id="7_adhq0"]
