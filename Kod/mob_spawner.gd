@@ -15,7 +15,7 @@ var random_position = RandomNumberGenerator.new()
 func _on_timer_timeout() -> void:
 	print("Spawna enemy")
 	Scoremanager.enemy_amount += 1
-	path_follow_2d.progress = random_position.randi_range(0, 1060) # Välj slumpmässig position längs Path2DD
+	path_follow_2d.progress = random_position.randi_range(0, 1060) # Välj slumpmässig position längs Path2D
 	
 	# Skapar fiende
 	var ene = enemy.instantiate() 
