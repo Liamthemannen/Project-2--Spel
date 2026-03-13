@@ -10,7 +10,7 @@ var killed_amount = 0
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("Paus") and !settings_menu.visible: #and !input_settings.visible
+	if event.is_action_pressed("Paus") and !settings_menu.visible: 
 		spel_paus = !spel_paus 
 		if spel_paus:
 			# Pausa spelet, stoppar musiken och frys tiden
