@@ -22,6 +22,7 @@ func save_score():
 		kills_list.append(int(entry[0]))
 	kills_list.sort()
 	kills_list.reverse()
+	
 	# Bygg om leaderboard i sorterad ordning baserat på kills
 	var sorted_leaderboard = []
 	var remaining = leaderboard.duplicate()
