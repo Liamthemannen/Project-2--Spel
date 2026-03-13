@@ -16,8 +16,22 @@ func reset_score():
 func save_score():
 	var leaderboard = load_leaderboard()
 	leaderboard.append([killed_amount, player_name])
-	leaderboard.sort()
-	leaderboard.reverse()
+	# Samla in alla kills-värden i en separat lista och sortera dem
+	var kills_list = []
+	for entry in leaderboard:
+		kills_list.append(int(entry[0]))
+	kills_list.sort()
+	kills_list.reverse()
+	# Bygg om leaderboard i sorterad ordning baserat på kills
+	var sorted_leaderboard = []
+	var remaining = leaderboard.duplicate()
+	for k in kills_list:
+		for i in range(remaining.size()):
+			if int(remaining[i][0]) == k:
+				sorted_leaderboard.append(remaining[i])
+				remaining.remove_at(i)
+				break
+	leaderboard = sorted_leaderboard
 	var file = FileAccess.open("user://leaderboard.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(leaderboard))
 	file.close()
